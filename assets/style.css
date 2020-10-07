@@ -6,9 +6,10 @@
     color: white;
     font-weight: bold;
     /* display: none; */
-}
+};
 
 #firstRow{
-    height:500px;
-    border: 2px, solid, grey
-}
+    display: inline-block;
+    border: 2px, solid, grey;
+    background: cornflowerblue;
+};

@@ -1,12 +1,17 @@
 $(document).ready(function(){
 
 var date = moment().format('l');
+var apiKey = "2438514b47bcb93a29fc4d3ba5ba4849";
+var weatherURL =  href= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
+
+var city ="";
 
 
 // var pastSearch = document.querySelector(".savedCity");
 
 
 // Weather Dashboard 
+var days = [".day1", ".day2",".day3",".day4",".day5",]
 var searchCity =[];
 var userInput =$("#search").val();
     console.log(userInput);
@@ -18,16 +23,15 @@ $(".btn").on("click", function(e){
  // take user input from #search & save it
   console.log("click");
   var weatherApi = "" ;
-  var inputValue = $(this).siblings(".city").val();
-  console.log(inputValue);
-
-  // var city = $(this).parent().attr("id")
-  localStorage.setItem(weatherApi.inputValue);
+  var userInput = $(this).siblings(".city").val();
+  console.log(city);
+   // save user input
+  localStorage.setItem(weatherApi.city);
   
   
   // var userInput = $("#search").val();
   // console.log (userInput);
-                // save user inpup
+               
                 //  userInput = "" ;// save.localstorage
                 //update to current city and 5 day forcast
                 // Var userDisplay = ""; //display. userInput
@@ -42,7 +46,15 @@ $(".btn").on("click", function(e){
 
     // current city and Day area
         //display searched city 
-            //name & current date
+        // var currentCity = $(userInput).val(localStorage.getItem);
+        //     //name & current date
+        //   function currentCity (){};
+          
+        $.ajax({url: queryURl, success: function(result){
+          console.log(result)
+        }});
+  
+          
             //temperature
             //humidity
             //wind speed
@@ -50,7 +62,11 @@ $(".btn").on("click", function(e){
                 //color coding
             
     //5 day forcast
-        //current date
+    // for ("days", function(){
+    //   var i=0;i < days.length; i++;
+    // });
+  //current date
+  var currentDate = [i].text(date);
         //weather picture
         //temp
         //humidity
