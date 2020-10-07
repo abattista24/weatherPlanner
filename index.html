@@ -6,34 +6,48 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Weather Dashboard </title>
+    <link rel="stylesheet" href="assets/style.css"/>
 </head>
 <body>
-    <heading>
-        <h1>Weather Dashboard</h1>
-    </heading>
-    <div class="row">
-        <nav class="col-4 savedCity">
+  <heading>
+    <h1>Weather Dashboard</h1>
+  </heading>
+  <div class="contianer">
+    <div class="row" id="firstRoe">
+      <aside class="col-4 savedCity">
         search for a city:
-            <form> 
-             <div class="form-group mx-sm-3 mb-2">
-                <input type="text" class="form-control" id="search" placeholder="City">
-                </div>
-                <button type="submit" class="btn btn-primary mb-2">
-                SEARCH
-                </button>
-            </form>
-        </nav>
-        <main class ="col-8">
-            <div class ="row">
-                <div class = "col-12 place"></div>
-            </div>
-            <div class="row">
-                <div class ="col-12 5day"> 5 Day Forecast: </div>       
-            </div>
-        
-        </main>
+        <form> 
+          <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control city" id="search" placeholder="City">
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">
+          SEARCH
+          </button>
+        </form>
+      </aside>
+      <!--shows current city-->
+      <main class ="col-8 place"> </main>
     </div>
-    <script type = text/javascript src= "assets/script.js">
-    </script>
+
+  <!--shows 5 day forcast -->
+    <header> 
+     5 Day Forecast: 
+    </header>
+    <div class="row dayboxes">
+      <div class = "col-2 day1"></div>
+      <div class = "col-2 day2"></div>
+      <div class = "col-2 day3"></div>
+      <div class = "col-2 day4"></div>
+      <div class = "col-2 day5"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+  <script type = text/javascript src= "assets/script.js">
+  </script>
+
 </body>
 </html>
